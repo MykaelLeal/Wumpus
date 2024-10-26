@@ -3,6 +3,7 @@ package main.game;
 import main.game.map.Map;
 import main.game.map.Point;
 import main.game.map.TreasureChest;
+import main.strategies.ShortestDistance;
 import main.strategies.Sort;
 
 public class Game {
@@ -10,7 +11,7 @@ public class Game {
 	private Player player;
 	public Game() {
 		this.map = new Map(8, 8);
-		this.player = new Player(new Sort());
+		this.player = new Player(new ShortestDistance());
 	}
 	
 	public void run() {
