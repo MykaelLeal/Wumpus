@@ -212,4 +212,15 @@ public class Map {
 		int[] size = {this.scenario.length, this.scenario[0].length};
 		return size;
 	}
+	
+	public Point getTreasureLocation() {
+	    for (String key : treasureChests.keySet()) {
+	        if (key.equals(TreasureChest.CHEST_TRESURE_CHARACTER)) {
+	            return treasureChests.get(key);
+	        }
+	    }
+	    return null;
+	}
+
+	
 }
