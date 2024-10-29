@@ -1,9 +1,14 @@
 package main.strategies;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+
 import main.game.Player;
 import main.game.map.Map;
+import main.game.map.Monster;
 import main.game.map.Point;
+import main.game.map.Rock;
 import main.game.map.TreasureChest;
 
 public class Sort implements Strategy{
@@ -15,6 +20,29 @@ public class Sort implements Strategy{
 	 */
 	@Override
 	public Point evaluatePossbileNextStep(List<Point> possibleNextSteps, Map map) {
-		return null;
+	       List<Point> validNextSteps = new ArrayList<>();
+
+		    // Verifica passos válidos (ignora rochas e monstros)
+		    for (Point nextStep : possibleNextSteps) {
+		        String space = map.get(nextStep);
+		        if (space != null && (space.equals(Rock.CHARACTER) || space.equals(Monster.CHARACTER))) {
+		            continue;
+		        }
+		        validNextSteps.add(nextStep);
+		    }
+
+		    if (validNextSteps.isEmpty()) {
+		        System.out.println("O robô não consegue avançar por causa dos obstáculos!");
+		        return null;
+		    }
+
+		    // Escolhe aleatoriamente um ponto da lista de passos válidos
+		    Random random = new Random();
+		    return validNextSteps.get(random.nextInt(validNextSteps.size()));
+		    
+		    
+		}
+
+		
 	}	
-}
+
