@@ -5,13 +5,14 @@ import main.game.map.Point;
 import main.game.map.TreasureChest;
 import main.strategies.ShortestDistance;
 import main.strategies.Sort;
+import main.strategies.FewerObstacles;
 
 public class Game {
 	private Map map;
 	private Player player;
 	public Game() {
 		this.map = new Map(8, 8);
-		this.player = new Player(new ShortestDistance());
+		this.player = new Player(new FewerObstacles());
 	}
 	
 	public void run() {
