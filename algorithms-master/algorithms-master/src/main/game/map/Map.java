@@ -216,8 +216,14 @@ public class Map {
 	}
 
 	public Point getTreasureLocation() {
-		// TODO Auto-generated method stub
-		return null;
+	    for (int x = 0; x < scenario.length; x++) {
+	        for (int y = 0; y < scenario[0].length; y++) {
+	            if (scenario[x][y] != null && scenario[x][y].equals(MapOfTreasure.CHARACTER)) {
+	                return new Point(x, y);
+	            }
+	        }
+	    }
+	    return null; // Retorna null caso o tesouro não seja encontrado
 	}
 	
 	
