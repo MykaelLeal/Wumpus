@@ -44,4 +44,5 @@ public class Point {
 		Point p = (Point) obj;
 		return (this.positionX == p.getPositionX() && this.positionY == p.getPositionY());
 	}
+
 }

@@ -18,6 +18,7 @@ public class Map {
 	
 	private HashMap<String, Point> treasureChests;
 	
+	
 	public Map (int scenarioSizeX, int scenarioSizeY) {
 		this.treasureChests = new HashMap<>();
 		this.scenario = new String[scenarioSizeX][scenarioSizeY];
@@ -219,6 +220,24 @@ public class Map {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	public boolean isValidPosition(int newX, int newY) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public int getWidth() {
+		// TODO Auto-generated method stub
+		return getWidth();
+	}
+
+	public int getHeight() {
+		// TODO Auto-generated method stub
+		return getHeight();
+	}
+
+	
+	
 	
 	
 	  

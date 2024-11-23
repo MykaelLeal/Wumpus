@@ -31,11 +31,6 @@ public class Sort implements Strategy{
 		        validNextSteps.add(nextStep);
 		    }
 
-		    if (validNextSteps.isEmpty()) {
-		        System.out.println("O robô não consegue avançar por causa dos obstáculos!");
-		        return null;
-		    }
-
 		    // Escolhe aleatoriamente um ponto da lista de passos válidos
 		    Random random = new Random();
 		    return validNextSteps.get(random.nextInt(validNextSteps.size()));
