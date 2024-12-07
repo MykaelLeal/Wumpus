@@ -56,8 +56,7 @@ public class ShortestDistance implements Strategy{
 
 	            // Se ambos os caminhos (direita e abaixo) estiverem bloqueados
 	            if (obstacleRight && obstacleDown) {
-	                System.out.println("Erro: Todos os caminhos à frente estão bloqueados no ponto " 
-	                                   + nextStep.getPositionX() + ", " + nextStep.getPositionY());
+	                System.out.println("Não há saída, o robô ficou preso!");
 	                return null; // Retorna null indicando que o movimento não é possível
 	            }
 

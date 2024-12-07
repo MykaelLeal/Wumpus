@@ -236,6 +236,16 @@ public class Map {
 		return getHeight();
 	}
 
+	public void setTargetTreasure(Point bestTreasure) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public boolean isTreasure(Point current) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 	
 	
 	
