@@ -40,7 +40,7 @@ public class FewerObstacles implements Strategy {
 	        	boolean obstacleRight = false;
 	        	boolean obstacleLeft = false;
 	        	boolean obstacleUp = false;
-	        	boolean obstacleDown = false;
+	        	boolean obstacleDown = false; oi
 
 	        	// Verifica se há rocha ou monstro à direita
 	        	if (nextStep.getPositionX() + 1 < 8) { // Dentro dos limites
